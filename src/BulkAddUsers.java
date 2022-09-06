@@ -102,7 +102,7 @@ public class BulkAddUsers {
                 adduserRequest.setNomineeRelation((int) r.getCell(29).getNumericCellValue());
 
                 //activate account-----------------------------------------------------
-                adduserRequest.setToBeActivated(true);
+                adduserRequest.setToBeActivated(false);
 
                 ObjectMapper objectMapper = new ObjectMapper();
                 final DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
@@ -115,10 +115,10 @@ public class BulkAddUsers {
                         .build();
                 MediaType mediaType = MediaType.parse("application/json");
                 RequestBody body = RequestBody.create(mediaType, jsonString);
-                String smokeUrl = "https://sougatabasu.com/cashrich//addNewCustomer.json?uname=User@sm0k3&pwd=$mokeP@ss2020";
-                String cronUrl = "https://cron.cashrichapp.in/cashrich//addNewCustomer.json?uname=pR0D@U53r!2o2o&pwd=Pr0d@Pa55!2o2o";
+                String smokeUrl = "https://sougatabasu.com/cashrich//addNewCustomer.json?uname=user@sm0Ke&pwd=sm0k3P@ss2022";
+                String cronUrl = "https://cashrichapp.in/cashrich//addNewCustomer.json?uname=u53R@PR0d!2!2!&pwd=Pa55@PR0d!2!2!";
                 Request request = new Request.Builder()
-                        .url(cronUrl)
+                        .url(smokeUrl)
                         .method("POST", body)
                         .addHeader("Content-Type", "application/json")
                         .build();

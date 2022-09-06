@@ -44,7 +44,7 @@ public class AddUserTarnsactions {
                 RequestBody body = RequestBody.create(mediaType, "");
                 String Dev_base_URL = "https://sougata.in/cashrich/createCustomerInvestment.json?uname=Us3rname@Dev&pwd=D3vP@ssword2020";
                 String SMoke_base_url = "https://sougatabasu.com/cashrich/createCustomerInvestment.json?uname=User@sm0k3&pwd=$mokeP@ss2020";
-                String cron_base_url = "https://cron.cashrichapp.in/cashrich/createCustomerInvestment.json?uname=pR0D@U53r!2o2o&pwd=Pr0d@Pa55!2o2o";
+                String cron_base_url = "https://run.cashrichapp.in/cashrich/panel/createCustomerInvestment.json?uname=u53R@PR0d!2!2!&pwd=Pa55@PR0d!2!2!";
                 String url = cron_base_url +
                         "&customer_id=" + (int) r.getCell(0).getNumericCellValue() +
                         "&no_unit=" + r.getCell(1).getNumericCellValue() +
@@ -64,7 +64,7 @@ public class AddUserTarnsactions {
                 System.out.println(url);
                 Request request = new Request.Builder()
                         .url(url)
-                        .method("POST", body)
+                        .method("POST", body).header("src","zd@h7AJdv53qzwBn")
                         .build();
                 Response response = client.newCall(request).execute();
                 String output = response.body().string();
