@@ -36,7 +36,7 @@ public class Linkedin {
             driver.findElement(By.className("main__sign-in-link")).click();
             Thread.sleep(2);
             driver.findElement(By.id("username")).sendKeys("dhirajuchil51@gmail.com");
-            driver.findElement(By.id("password")).sendKeys("zynga123@");
+
 
             Robot r = new Robot();
             r.keyPress(KeyEvent.VK_ENTER);
